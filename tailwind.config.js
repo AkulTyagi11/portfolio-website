@@ -2,8 +2,12 @@
 module.exports = {
   content: ["*"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'orbi': ['Orbitron', 'sans-serif'],
+        'lex': ['Lexend', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
-
