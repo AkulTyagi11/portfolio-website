@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AT. | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/79d8a0ebfd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+
+  <body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full px-20 pt-4 pb-3 bg-transparent duration-500">
+      <div class="flex justify-between">
+        <p class="text-[#00FFFF] font-bold font-orbi text-xl">AT.</p>
+        <div class="flex justify-end text-white font-semibold font-orbi text-lg space-x-14">
+          <a href="#">
+            <button class="cursor-crosshair rounded-xl font-medium group">
+              <div class="relative overflow-hidden">
+                <p class="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"><i class="fa-solid fa-house pr-2"></i>Home</p>
+                <p class="hover:text-[#00FFFF] absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"><i class="fa-solid fa-house pr-2"></i>Home</p>
+              </div>
+            </button>
+          </a>
+          <a href="#about">
+            <button class="cursor-crosshair rounded-xl font-medium group">
+              <div class="relative overflow-hidden">
+                <p class="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"><i class="fa-solid fa-user pr-2"></i>About</p>
+                <p class="hover:text-[#00FFFF] absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"><i class="fa-solid fa-user pr-2"></i>About</p>
+              </div>
+            </button>
+          </a>
+          <a href="#projects">
+            <button class="cursor-crosshair rounded-xl font-medium group">
+              <div class="relative overflow-hidden">
+                <p class="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"><i class="fa-solid fa-laptop-code pr-2"></i>Projects</p>
+                <p class="hover:text-[#00FFFF] absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"><i class="fa-solid fa-laptop-code pr-2"></i>Projects</p>
+              </div>
+            </button>
+          </a>
+          <a href="#contact">
+            <button class="cursor-crosshair rounded-xl font-medium group">
+              <div class="relative overflow-hidden">
+                <p class="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"><i class="fa-solid fa-envelope pr-2"></i>Contact</p>
+                <p class="hover:text-[#00FFFF] absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"><i class="fa-solid fa-envelope pr-2"></i>Contact</p>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="flex flex-col justify-center min-h-screen bg-repeat-y bg-fixed bg-cover" style="background-image: url('/img/blueclouds180.jpeg');">
+      <div class="flex flex-row justify-around mt-44">
+        <div class="text-white text-center">
+          <h1 class="text-5xl font-lex font-bold pb-9">Hello there!</h1>
+          <h3 class="text-5xl font-lex font-bold pb-9">
+            I am
+            <span class="text-6xl font-orbi font-extrabold pb-9 text-[#00FFFF]">Akul Tyagi</span>
+          </h3>
+          <p class="text-5xl font-lex font-semibold auto-type"></p>
+        </div>
+        <div class="w-96">
+          <img src="/img/myphoto.png" class="rounded-full" alt="Profile Photo of Akul Tyagi" />
+        </div>
+      </div>
+      <div class="flex flex-row ml-64">
+        <a class="mr-7" href="https://github.com/AkulTyagi11" target="_blank">
+          <button class="bg-black border-2 border-black w-12 h-12 rounded-full duration-500 text-white text-2xl">
+            <i class="fab fa-github"></i>
+          </button>
+        </a>
+        <a class="mr-7" href="https://www.linkedin.com/in/akul-tyagi-242979277/" target="_blank">
+          <button class="bg-blue-500 w-12 h-12 rounded-full duration-500 text-white text-2xl">
+            <i class="fab fa-linkedin-in"></i>
+          </button>
+        </a>
+        <a class="mr-7" href="https://x.com/akultyagi_7" target="_blank">
+          <button class="bg-black border-2 border-black w-12 h-12 rounded-full duration-500 text-white text-2xl">
+            <i class="fab fa-x-twitter"></i>
+          </button>
+        </a>
+        <a class="mr-7" href="https://www.instagram.com/akulltyagi_/" target="_blank">
+          <button class="w-12 h-12 rounded-full duration-500 border-pink-500 bg-gradient-to-b from-indigo-600 via-pink-600 to-yellow-500 text-white text-2xl">
+            <i class="fab fa-instagram"></i>
+          </button>
+        </a>
+      </div>
+
+      <!-- Typed.js initialization -->
+      <script>
+        var typed = new Typed(".auto-type", {
+          strings: ["Frontend Developer"],
+          typeSpeed: 100,
+          backSpeed: 90,
+          loop: true,
+        });
+      </script>
+
+      <!-- About -->
+      <div id="about" class="text-center text-6xl font-orbi font-extrabold text-[#00FFFF] mt-36">
+        About Me
+      </div>
+      <div class="text-2xl text-white text-center tracking-normal leading-relaxed font-lex font-normal mx-40 my-12">
+        I’m a Computer Science and Engineering student at SRM University KTR with a keen interest in Cybersecurity, Web Development, and emerging technologies like AI and ML.
+        <br />
+        <br />
+        I specialize in Frontend Development, working with HTML , JS , Tailwind and React.
+        <br />
+        <br />
+        Passionate about learning new technologies like Blockchain and implementing them in real-world projects.
+        <br />
+        I am driven by curiosity eager to learn, constantly exploring new technologies and staying up-to-date with the latest trends.
+        <br />
+        <br />
+        When I am not coding, you will find me watching YouTube, scrolling through Instagram, or playing Minecraft.
+        <br />
+        <br />
+        "The only way to do great work is to love what you do." – Steve Jobs
+      </div>
+
+      <!-- Skillset -->
+      <div class="text-center text-6xl font-orbi font-extrabold text-[#00FFFF] mt-20">
+        Professional Skillset
+      </div>
+      <div class="grid gap-x-32 gap-y-6 grid-cols-5 px-36 pt-20">
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/html.svg" alt="HTML" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">HTML</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/css.svg" alt="CSS" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">CSS</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/js.svg" alt="JavaScript" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">JavaScript</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/java.svg" alt="JAVA" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">Java</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/py.svg" alt="PYTHON" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">Python</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/c.svg" alt="C" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">C</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/cpp.svg" alt="C" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">C++</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/tailwind.svg" alt="TAILWIND" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">Tailwind</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/react.svg" alt="REACT" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">React</span>
+        </div>
+        <div class="flex flex-col items-center p-6 border-4 border-black">
+          <img src="/img/mysql.svg" alt="MYSQL" class="mb-4 w-12 h-12" />
+          <span class="text-white text-lg font-semibold">MySQL</span>
+        </div>
+      </div>
+
+      <!-- Project -->
+      <div id="projects" class="text-center text-6xl font-orbi font-extrabold text-[#00FFFF] pb-20 mt-28">
+        Projects
+      </div>
+      <div class="flex justify-center">
+        <div class="w-[30%] bg-transparent border-4 border-black">
+          <img src="/img/budgettracker.png" alt="Budget Tracker" class="w-[100%] border-b-4 border-black" />
+          <div class="text-center px-2 py-2 tracking-normal leading-relaxed">
+            <p class="text-[#00FFFF] text-lg font-semibold">Budget Tracker</p>
+            <p class="text-white text-base font-light">
+              Made using Python, HTML and CSS
+            </p>
+            <a href="https://akultyagi11.github.io/BudgetTracker/" target="_blank" class="flex justify-end">
+              <button class="bg-black border-2 border-black w-7 h-7 rounded-full text-white">
+                <i class="fab fa-github text-lg"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="h-screen flex items-center justify-center mb-12">
+        <div class="bg-transparent rounded-lg max-w-md w-full">
+          <h2 id="contact" class="text-center text-6xl font-orbi font-extrabold text-[#00FFFF] pb-20 mt-20">
+            Contact Me
+          </h2>
+          <form action="mailto:akultyagi2304@gmail.com" method="post" enctype="text/plain">
+            <div class="mb-4">
+              <label for="name" class="block text-white">Your Name</label>
+              <input type="text" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-white">Your Email</label>
+              <input type="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-white">Your Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+            </div>
+            <button class="w-full bg-blue-500 text-white py-2 px-2 rounded-lg hover:bg-blue-600 transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-auto py-4 bg-black bg-opacity-45 backdrop-blur-md transition-transform duration-300">
+        <div class="flex justify-evenly">
+          <div class="text-white">
+            <h3>Designed and Developed by Akul Tyagi</h3>
+          </div>
+          <div class="text-white">
+            <h3>Copyright @2025 AT</h3>
+          </div>
+          <div class="text-lg">
+            <a href="https://github.com/AkulTyagi11" target="_blank" class="text-white hover:text-[#00FFFF] mr-10">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/akul-tyagi-242979277/" target="_blank" class="text-white hover:text-[#00FFFF] mr-10">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/akultyagi_7" class="text-white hover:text-[#00FFFF] mr-10">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/akulltyagi_/" class="text-white hover:text-[#00FFFF]">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
