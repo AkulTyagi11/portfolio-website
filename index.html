@@ -1,51 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AT. | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/79d8a0ebfd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>  
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/src/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-</head>
+  <body class="overflow-x-hidden">
+    <nav id="navbar" class="fixed w-full px-2 pt-4 pb-3 duration-500 bg-black sm:px-4 lg:px-6">
+      <div class="flex items-center justify-between">
+          <p class="text-[#00FFFF] font-bold font-orbi text-2xl">AT.</p>
+          <button id="menu-btn" class="md:hidden text-white hover:text-[#00FFFF]">
+              <i class="text-2xl fa-solid fa-bars"></i>
+          </button>
+          <!-- Desktop Menu -->
+          <div class="justify-end hidden space-x-2 text-xs font-semibold text-white md:flex font-orbi sm:text-sm md:text-base lg:text-lg sm:space-x-4 md:space-x-8 lg:space-x-14">
+              <a href="#">
+                  <button class="px-1 font-medium cursor-crosshair rounded-xl group sm:px-2">
+                      <div class="relative overflow-hidden">
+                          <p class="whitespace-nowrap group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              <i class="fa-solid fa-house sm:pr-1 lg:pr-2"></i><span>Home</span>
+                          </p>
+                          <p class="whitespace-nowrap hover:text-[#00FFFF] absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              <i class="fa-solid fa-house sm:pr-1 lg:pr-2"></i><span>Home</span>
+                          </p>
+                      </div>
+                  </button>
+              </a>
+              <a href="#about">
+                  <button class="px-1 font-medium cursor-crosshair rounded-xl group sm:px-2">
+                      <div class="relative overflow-hidden">
+                          <p class="whitespace-nowrap group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              <i class="fa-solid fa-user sm:pr-1 lg:pr-2"></i><span>About</span>
+                          </p>
+                          <p class="whitespace-nowrap hover:text-[#00FFFF] absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              <i class="fa-solid fa-user sm:pr-1 lg:pr-2"></i><span>About</span>
+                          </p>
+                      </div>
+                  </button>
+              </a>
+              <a href="#projects">
+                  <button class="px-1 font-medium cursor-crosshair rounded-xl group sm:px-2">
+                      <div class="relative overflow-hidden">
+                          <p class="whitespace-nowrap group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              <i class="fa-solid fa-laptop-code sm:pr-1 lg:pr-2"></i><span>Projects</span>
+                          </p>
+                          <p class="whitespace-nowrap hover:text-[#00FFFF] absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              <i class="fa-solid fa-laptop-code sm:pr-1 lg:pr-2"></i><span>Projects</span>
+                          </p>
+                      </div>
+                  </button>
+              </a>
+              <a href="#contact">
+                  <button class="px-1 font-medium cursor-crosshair rounded-xl group sm:px-2">
+                      <div class="relative overflow-hidden">
+                          <p class="whitespace-nowrap group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              <i class="fa-solid fa-envelope sm:pr-1 lg:pr-2"></i><span>Contact</span>
+                          </p>
+                          <p class="whitespace-nowrap hover:text-[#00FFFF] absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                              <i class="fa-solid fa-envelope sm:pr-1 lg:pr-2"></i><span>Contact</span>
+                          </p>
+                      </div>
+                  </button>
+              </a>
+          </div>
+          <!-- Mobile Menu Dropdown -->
+      </div>
 
-<body class="overflow-x-hidden">
-  <div class="bg-cover bg-center flex flex-col justify-center min-h-screen" style="background-image: url('starrybg.jpeg');">
-    <!-- Navigation Bar (Header) -->
-    <nav class="absolute top-0 left-0 w-full px-6 sm:px-10 lg:px-20 py-4 bg-transparent z-10">
-      <ul class="flex justify-center text-sm sm:text-lg md:text-xl text-white font-semibold font-orbi space-x-6 lg:space-x-48">
-        <li><button class="hover:text-blue-300">HOME</button></li>
-        <li><button class="hover:text-blue-300">ABOUT</button></li>
-        <li><button class="hover:text-blue-300">PROJECT</button></li>
-        <li><button class="hover:text-blue-300">CONTACT</button></li>
-      </ul>
+      <div id="mobile-menu" class="fixed left-0 right-0 hidden mt-3 md:hidden bg-black/75">
+        <div class="flex flex-col items-center py-4 space-y-4 text-white font-orbi">
+            <a href="#">
+                <i class="pr-2 fa-solid fa-house"></i>Home
+            </a>
+            <a href="#about">
+                <i class="pr-2 fa-solid fa-user"></i>About
+            </a>
+            <a href="#projects">
+                <i class="pr-2 fa-solid fa-laptop-code"></i>Projects
+            </a>
+            <a href="#contact">
+                <i class="pr-2 fa-solid fa-envelope"></i>Contact
+            </a>
+        </div>
+      </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="flex flex-col md:flex-row items-center justify-center pt-24 sm:pt-28 md:pt-32 space-y-6 md:space-y-0 md:space-x-8 px-6 sm:px-10 lg:px-20">
-      <div class="text-white font-serif leading-relaxed text-center md:text-left md:pr-8">
-        <span class="text-3xl sm:text-4xl font-bold block font-lex">Hi, I am</span>
-        <span class="text-4xl sm:text-5xl font-extrabold font-orbi auto-type text-[#00FFFF]"></span>
-        <span class="text-3xl sm:text-4xl font-bold font-lex block mt-2 sm:mt-4">A CSE Student at SRM University.</span>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    // Close menu after clicking button
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        });
+    });
+</script>
+
+    <!-- Hero -->
+    <div class="flex flex-col justify-center min-h-screen bg-repeat-y bg-fixed bg-cover bg-[url('img/blueclouds180.jpeg')]">
+      <div class="flex flex-col justify-around px-4 mt-32 md:flex-row sm:mt-40 md:mt-48">
+        <div class="mb-8 text-center text-white md:mb-0">
+          <h1 class="pb-3 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl font-lex sm:pb-4 md:pb-9">Hello there!</h1>
+          <h3 class="pb-3 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl font-lex sm:pb-4 md:pb-9">
+            I am
+            <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbi font-extrabold text-[#00FFFF]">Akul Tyagi</span>
+          </h3>
+          <p class="text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl font-lex auto-type"></p>
+        </div>
+        <div class="w-40 mx-auto sm:w-48 md:w-72 lg:w-96 md:mx-0">
+          <img src="img/myphoto.png" class="w-full h-auto rounded-full" alt="Profile Photo of Akul Tyagi" />
+        </div>
       </div>
-      <div class="w-2/3 sm:w-1/3 md:w-1/4">
-        <img src="myphoto.png" class="w-full rounded-full" alt="Profile Photo">
+      <div class="flex flex-row justify-center mt-24 mb-14 md:justify-start md:ml-72 md:mt-0">
+        <a class="mr-3 sm:mr-4 md:mr-7" href="https://github.com/AkulTyagi11" target="_blank">
+          <button class="w-8 h-8 text-sm text-white duration-500 bg-black border-2 border-black rounded-full sm:w-10 sm:h-10 md:w-12 md:h-12 sm:text-xl md:text-2xl">
+            <i class="fab fa-github"></i>
+          </button>
+        </a>
+        <a class="mr-3 sm:mr-4 md:mr-7" href="https://www.linkedin.com/in/akul-tyagi-242979277/" target="_blank">
+          <button class="w-8 h-8 text-sm text-white duration-500 bg-blue-500 rounded-full sm:w-10 sm:h-10 md:w-12 md:h-12 sm:text-xl md:text-2xl">
+            <i class="fab fa-linkedin-in"></i>
+          </button>
+        </a>
+        <a class="mr-3 sm:mr-4 md:mr-7" href="https://x.com/akultyagi_7" target="_blank">
+          <button class="w-8 h-8 text-sm text-white duration-500 bg-black border-2 border-black rounded-full sm:w-10 sm:h-10 md:w-12 md:h-12 sm:text-xl md:text-2xl">
+            <i class="fab fa-x-twitter"></i>
+          </button>
+        </a>
+        <a class="mr-3 sm:mr-4 md:mr-7" href="https://www.instagram.com/akulltyagi_/" target="_blank">
+          <button class="w-8 h-8 text-sm text-white duration-500 border-pink-500 rounded-full sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-b from-indigo-600 via-pink-600 to-yellow-500 sm:text-xl md:text-2xl">
+            <i class="fab fa-instagram"></i>
+          </button>
+        </a>
       </div>
+
+      <!-- Typed.js initialization -->
+      <script>
+        var typed = new Typed(".auto-type", {
+          strings: ["Fullstack Developer", "AI/ML Engineer"],
+          typeSpeed: 85,
+          backSpeed: 50,
+          loop: true,
+        });
+      </script>
+
+    <!-- About -->
+    <div id="about" class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbi font-extrabold text-[#00FFFF] mt-20 sm:mt-28 md:mt-36">
+      About Me
+    </div>
+    <div class="mx-4 my-6 text-base font-normal leading-relaxed tracking-normal text-center text-white sm:text-xl md:text-2xl font-lex sm:mx-20 md:mx-40 sm:my-8 md:my-12">
+      I’m a third-year Computer Science and Engineering student in SRM Institute of Science and Technology KTR. I’m currently exploring areas like AI/ML and working on developing ML models.
+      <br />
+      <br />
+      I specialize in Frontend Development, working with HTML , JavaScript , Tailwind and React. I am also proficient in Backend Development. 
+      <br />
+      <br />
+      Passionate about exploring emerging technologies and applying them to real-world projects, with a strong enthusiasm for collaborative development.
+      <br />
+      I am an avid participator in hackathons and coding competitions, I have also completed an internship in Data Science and AI/ML.
+      <br />
+      <br />
+      When I am not coding, you will find me watching YouTube, scrolling through Instagram, or playing Valorant.
+      <br />
+      <br />
+      "The only way to do great work is to love what you do." – Steve Jobs
+    </div>
+
+    <!-- Skillset -->
+    <div class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbi font-extrabold text-[#00FFFF] mt-12 sm:mt-16 md:mt-20">
+      Professional Skillset
+    </div>
+    <div class="grid grid-cols-2 gap-4 px-4 pt-10 sm:gap-6 md:gap-x-32 md:gap-y-6 sm:grid-cols-3 md:grid-cols-5 sm:px-20 md:px-36 sm:pt-16 md:pt-20">
+
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/html.svg" alt="HTML" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">HTML</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/css.svg" alt="CSS" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">CSS</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/js.svg" alt="JAVASCRIPT" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">JAVASCRIPT</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/py.svg" alt="PYTHON" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">PYTHON</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/java.svg" alt="JAVA" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">JAVA</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/c.svg" alt="C" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">C</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/cpp.svg" alt="C++" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">C++</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/tailwind.svg" alt="TAILWIND" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">TAILWIND</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/react.svg" alt="REACT" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">REACT</span>
+      </div>
+      <div class="flex flex-col items-center p-3 border-2 border-black sm:p-4 md:p-6 sm:border-4">
+        <img src="/img/mysql.svg" alt="MYSQL" class="w-8 h-8 mb-2 sm:mb-4 sm:w-10 md:w-12 sm:h-10 md:h-12" />
+        <span class="text-sm font-semibold text-white sm:text-base md:text-lg">MYSQL</span>
+      </div>
+    </div>
+
+    <!-- Project -->
+    <div id="projects" class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbi font-extrabold text-[#00FFFF] pb-10 sm:pb-16 md:pb-20 mt-16 sm:mt-20 md:mt-28 pt-24">
+    Projects
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-0 justify-items-center">
+  
+  <!-- Project 1 -->
+  <div class="w-[80%] sm:w-[70%] md:w-[60%] bg-transparent border-2 sm:border-4 border-black flex flex-col">
+    <div class="border-b-2 border-black sm:border-b-4">
+      <img src="/img/budgettracker.png" alt="Budget Tracker" class="object-cover w-full h-96" />
+    </div>
+    <div class="flex flex-col justify-between flex-1 px-2 py-2 leading-relaxed tracking-normal text-center">
+      <div>
+        <p class="text-[#00FFFF] text-base sm:text-lg font-semibold">Budget Tracker</p>
+        <p class="text-sm font-light text-white sm:text-base">
+          Made using Python, HTML and CSS
+        </p>
+      </div>
+      <a href="https://akultyagi11.github.io/BudgetTracker/" target="_blank" class="flex justify-end mt-2">
+        <button class="w-6 h-6 text-white bg-black border-2 border-black rounded-full sm:w-7 sm:h-7">
+          <i class="text-base fab fa-github sm:text-lg"></i>
+        </button>
+      </a>
     </div>
   </div>
 
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed(".auto-type", {
-      strings: ["AKUL TYAGI"],
-      typeSpeed: 130,
-      backSpeed: 100,
-      loop: true,
-    });
-  </script>
-</body>
+  <!-- Project 2 -->
+  <div class="w-[80%] sm:w-[70%] md:w-[60%] bg-transparent border-2 sm:border-4 border-black flex flex-col">
+    <div class="border-b-2 border-black sm:border-b-4">
+      <img src="/img/motherina homepage.png" alt="Motherina" class="object-fill w-auto obj h-96" />
+    </div>
+    <div class="flex flex-col justify-between flex-1 px-2 py-2 leading-relaxed tracking-normal text-center">
+      <div>
+        <p class="text-[#00FFFF] text-base sm:text-lg font-semibold">Motherina (Appointment Booking System)</p>
+        <p class="text-sm font-light text-white sm:text-base">
+          Made using Typescript, Javascript, TailwindCSS with Calendly integration 
+        </p>
+      </div>
+      <a href="https://github.com/AkulTyagi11/motherina_project" target="_blank" class="flex justify-end mt-2">
+        <button class="w-6 h-6 text-white bg-black border-2 border-black rounded-full sm:w-7 sm:h-7">
+          <i class="text-base fab fa-github sm:text-lg"></i>
+        </button>
+      </a>
+    </div>
+  </div>
 
+</div>
+
+
+
+    <!-- Contact -->
+    <div class="flex items-center justify-center min-h-screen px-4 mb-8 sm:mb-12 sm:px-0">
+      <div class="w-full max-w-md bg-transparent rounded-lg">
+        <h2 id="contact" class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbi font-extrabold text-[#00FFFF] pb-10 sm:pb-16 md:pb-20 mt-12 sm:mt-16 md:mt-20">
+          Contact Me
+        </h2>
+        <form action="mailto:akultyagi2304@gmail.com" method="post" enctype="text/plain">
+          <div class="mb-4">
+            <label for="name" class="block text-sm text-white sm:text-base">Your Name</label>
+            <input type="text" name="name" class="w-full px-3 py-2 border rounded-lg sm:px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm text-white sm:text-base">Your Email</label>
+            <input type="email" name="email" class="w-full px-3 py-2 border rounded-lg sm:px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm text-white sm:text-base">Your Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg sm:px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+          </div>
+          <button class="w-full px-2 py-2 text-sm text-white transition bg-blue-500 rounded-lg hover:bg-blue-600 sm:text-base">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 mt-auto transition-transform duration-300 bg-black bg-opacity-45 backdrop-blur-md">
+      <div class="flex flex-col items-center space-y-4 sm:flex-row justify-evenly sm:space-y-0">
+        <div class="text-sm text-center text-white sm:text-base">
+          <h3>Designed and Developed by Akul Tyagi</h3>
+        </div>
+        <div class="text-sm text-center text-white sm:text-base">
+          <h3>Copyright @2025 AT</h3>
+        </div>
+        <div class="text-base sm:text-lg">
+          <a href="https://github.com/AkulTyagi11" target="_blank" class="text-white hover:text-[#00FFFF] mr-6 sm:mr-10">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/akul-tyagi-242979277/" target="_blank" class="text-white hover:text-[#00FFFF] mr-6 sm:mr-10">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://x.com/akultyagi_7" class="text-white hover:text-[#00FFFF] mr-6 sm:mr-10">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/akulltyagi_/" class="text-white hover:text-[#00FFFF]">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
